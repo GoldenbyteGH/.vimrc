@@ -3,7 +3,7 @@ This vimrc configuration is designated for Python programming using Vim as an ID
 Refernece: "https://scrivocodice.it/vim-ide-sviluppo-python/" 
 
 
-Here is a list of all plugins installed by Vundle.
+Here is a list of all plugins installed using [Vundle](https://github.com/VundleVim/Vundle.vim).
 
 * gmarik/Vundle.vim
 * tmhedberg/SimpylFold
