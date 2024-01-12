@@ -5,14 +5,14 @@ Refernece: "https://scrivocodice.it/vim-ide-sviluppo-python/"
 
 Here is a list of all plugins installed using [Vundle](https://github.com/VundleVim/Vundle.vim).
 
-* gmarik/Vundle.vim
-* tmhedberg/SimpylFold
-* vim-scripts/indentpython.vim
-* vim-syntastic/syntastic
-* nvie/vim-flake8
-* scrooloose/nerdtree
-* kien/ctrlp.vim
-* tpope/vim-fugitive
-* Lokaltog/powerline
-* davidhalter/jedi-vim
-
+| Plugin      | Description |
+| ----------- | ----------- |
+| gmarik/Vundle.vim | Vundle Configuration |
+| tmhedberg/SimpylFold | Code Section Collapsing |
+| vim-scripts/indentpython.vim | AutoIndent |
+| vim-syntastic/syntastic - nvie/vim-flake8 | PySyntaxCheck |
+| scrooloose/nerdtree | os_tree_sidebar |
+| kien/ctrlp.vim | FileSearch |
+| tpope/vim-fugitive | git integration |
+| Lokaltog/powerline | StatusLine |
+| davidhalter/jedi-vim | AutoCompletion |
