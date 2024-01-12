@@ -11,8 +11,8 @@ Here is a list of all plugins installed using [Vundle](https://github.com/Vundle
 | tmhedberg/SimpylFold | Code Section Collapsing |
 | vim-scripts/indentpython.vim | AutoIndent |
 | vim-syntastic/syntastic - nvie/vim-flake8 | PySyntaxCheck |
-| scrooloose/nerdtree | os_tree_sidebar |
+| scrooloose/nerdtree | Ostree-sidebar |
 | kien/ctrlp.vim | FileSearch |
-| tpope/vim-fugitive | git integration |
+| tpope/vim-fugitive | Git Integration |
 | Lokaltog/powerline | StatusLine |
 | davidhalter/jedi-vim | AutoCompletion |
