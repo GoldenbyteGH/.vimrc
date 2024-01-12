@@ -1,5 +1,3 @@
-" Ref https://scrivocodice.it/vim-ide-sviluppo-python/ "
-" Ref https://scrivocodice.it/vim-ide-sviluppo-python/ "
 " Start 1 |  Vundle setting
 set splitbelow
 set backspace=indent,eol,start
