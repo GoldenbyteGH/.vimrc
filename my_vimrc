@@ -1,0 +1,124 @@
+" Ref https://scrivocodice.it/vim-ide-sviluppo-python/ "
+" Ref https://scrivocodice.it/vim-ide-sviluppo-python/ "
+" Start 1 |  Vundle setting
+set splitbelow
+set backspace=indent,eol,start
+
+set nocompatible              " obbligatorio
+filetype off                  " obbligatorio
+
+" imposta percorso Vundle di runtime e inizializza Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" abilita la gestione pacchetti con Vundle
+Plugin 'gmarik/Vundle.vim'
+
+" Tutti i plugin devono essere inseriti tra vundle#begin e vundle#end
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" End 1 | Vundle settings
+
+" Start 2 |Abilitazione chiusura ed apertura codice
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+Plugin 'tmhedberg/SimpylFold'
+let g:SimpylFold_docstring_preview=1
+"End 2 
+
+"Start 3 | autoIndent Config
+au BufNewFile,BufRead *.py set tabstop=4
+au BufNewFile,BufRead *.py set softtabstop=4
+au BufNewFile,BufRead *.py set shiftwidth=4
+au BufNewFile,BufRead *.py set textwidth=79
+au BufNewFile,BufRead *.py set expandtab
+au BufNewFile,BufRead *.py set autoindent
+au BufNewFile,BufRead *.py set fileformat=unix
+
+Plugin 'vim-scripts/indentpython.vim'
+"End 3 | autoIndent Config
+
+"Start 4 | show uneful spaces
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"End 4 | show uneful spaces
+" set UTF-8
+set encoding=utf-8
+
+"Start 5 | SyntaxCheckPython
+Plugin 'vim-syntastic/syntastic'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['flake8']
+
+Plugin 'nvie/vim-flake8'
+"End 5 | SyntaxCheckPython
+
+" Start 6 | CodeMarkup 
+let python_highlight_all=1
+syntax on
+"End 6 | CodeMarkup
+
+" Start 7 | NERDtree (file explorer)
+Plugin 'scrooloose/nerdtree'
+:set modifiable "allow to modify files ferom NERDtree
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTreei
+"End 7 | NERDtree
+
+"Start 8 | fileSearch (Ctrl+P to serach)
+Plugin 'kien/ctrlp.vim'
+"End 8
+
+set nu "numered lines
+
+
+"Start 9 | git integration
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+set laststatus=2
+"End 9 
+
+"Start 10 | AutoCompletion
+Plugin 'davidhalter/jedi-vim'
+"let g:jedi#auto_initialization = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 0
+let g:jedi#show_call_signatures = "1"
+let g:jedi#force_py_version = 3
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_stubs_command = "<leader>s"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+let g:jedi#rename_command_keep_name = "<leader>R"
+let g:jedi#environment_path = "/usr/bin/python3"
+let g:jedi#environment_path = "venv"
+"End 10 | AutoCompetion
+
+
+
+
+
+
+
+
+
+
+
